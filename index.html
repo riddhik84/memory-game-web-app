@@ -1,86 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Matching Game</title>
-    <meta name="description" content="">
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
-    <link rel="stylesheet" href="css/app.css">
-</head>
-<body>
-
-    <div class="container">
-        <header>
+   <head>
+      <meta charset="utf-8">
+      <title>Matching Game</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://csshake.surge.sh/csshake.min.css">
+      <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+      <link rel="stylesheet" href="css/app.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <header>
             <h1>Matching Game</h1>
-        </header>
-
-        <section class="score-panel">
-        	<ul class="stars">
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        	</ul>
-
-        	<span class="moves">3</span> Moves
-
-            <div class="restart">
-        		<i class="fa fa-repeat"></i>
-        	</div>
-        </section>
-
-        <ul class="deck">
-            <li class="card">
-                <i class="fa fa-diamond"></i>
+         </header>
+         <section class="score-panel">
+            <ul id="stars" class="stars">
+               Stars:
+               <li><i id="1star" class="fa fa-star"></i></li>
+               <li><i id="2star" class="fa fa-star"></i></li>
+               <li><i id="3star" class="fa fa-star"></i></li>
+            </ul>
+            <br>
+            <span id="moves" class="moves"></span>
+            <br>
+            <span id="timer" class="timer"></span>
+            <div id="restart" class="restart">
+               <i class="fa fa-repeat"> Restart</i>
+            </div>
+         </section>
+         <ul id="deck" class="deck">
+            <li id="0" class="card">
+               <i id="icon1" class="fa"></i>
             </li>
-            <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
+            <li id="1" class="card">
+               <i id="icon2" class="fa"></i>
             </li>
-            <li class="card match">
-                <i class="fa fa-anchor"></i>
+            <li id="2" class="card">
+               <i id="icon3" class="fa"></i>
             </li>
-            <li class="card">
-                <i class="fa fa-bolt"></i>
+            <li id="3" class="card">
+               <i id="icon4" class="fa"></i>
             </li>
-            <li class="card">
-                <i class="fa fa-cube"></i>
+            <li id="4" class="card">
+               <i id="icon5" class="fa"></i>
             </li>
-            <li class="card match">
-                <i class="fa fa-anchor"></i>
+            <li id="5" class="card">
+               <i id="icon6" class="fa"></i>
             </li>
-            <li class="card">
-                <i class="fa fa-leaf"></i>
+            <li id="6" class="card">
+               <i id="icon7" class="fa"></i>
             </li>
-            <li class="card">
-                <i class="fa fa-bicycle"></i>
+            <li id="7" class="card">
+               <i id="icon8" class="fa"></i>
             </li>
-            <li class="card">
-                <i class="fa fa-diamond"></i>
+            <li id="8" class="card">
+               <i id="icon9" class="fa"></i>
             </li>
-            <li class="card">
-                <i class="fa fa-bomb"></i>
+            <li id="9" class="card">
+               <i id="icon10" class="fa"></i>
             </li>
-            <li class="card">
-                <i class="fa fa-leaf"></i>
+            <li id="10" class="card">
+               <i id="icon11" class="fa"></i>
             </li>
-            <li class="card">
-                <i class="fa fa-bomb"></i>
+            <li id="11" class="card">
+               <i id="icon12" class="fa"></i>
             </li>
-            <li class="card open show">
-                <i class="fa fa-bolt"></i>
+            <li id="12" class="card">
+               <i id="icon13" class="fa"></i>
             </li>
-            <li class="card">
-                <i class="fa fa-bicycle"></i>
+            <li id="13" class="card">
+               <i id="icon14" class="fa"></i>
             </li>
-            <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
+            <li id="14" class="card">
+               <i id="icon15" class="fa"></i>
             </li>
-            <li class="card">
-                <i class="fa fa-cube"></i>
+            <li id="15" class="card">
+               <i id="icon16" class="fa"></i>
             </li>
-        </ul>
-    </div>
-
-    <script src="js/app.js"></script>
-</body>
+         </ul>
+      </div>
+      <article class="modal">
+         <div class="modal-content">
+            <h1 class="modal-title">Congratulations! Game Over!</h1>
+            <ul class="game-score">
+               <li id="timeScore"></li>
+               <li id="movesScore"></li>
+               <li id="starsScore"></li>
+            </ul>
+            <p id="gameHistory"></p>
+            <button class="playAgain">Play again</button>
+         </div>
+      </article>
+      <script src="js/app.js"></script>
+   </body>
 </html>
