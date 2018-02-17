@@ -11,3 +11,6 @@ The player then turns over a second card, trying to find the corresponding card 
 If the cards match, both cards stay flipped over.
 If the cards do not match, both cards are flipped face down.
 The game ends once all cards have been correctly matched.
+
+![](https://github.com/riddhik84/memory-game-web-app/tree/master/img/game.png)
+
