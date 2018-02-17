@@ -6,11 +6,13 @@ The game board consists of sixteen "cards" arranged in a grid. The deck is made 
 The gameplay rules are very simple: flip over two hidden cards at a time to locate the ones that match!
 
 Each turn:
-The player flips one card over to reveal its underlying symbol.
-The player then turns over a second card, trying to find the corresponding card with the same symbol.
-If the cards match, both cards stay flipped over.
-If the cards do not match, both cards are flipped face down.
-The game ends once all cards have been correctly matched.
+* The player flips one card over to reveal its underlying symbol.
+* The player then turns over a second card, trying to find the corresponding card with the same symbol.
+* If the cards match, both cards stay flipped over.
+* If the cards do not match, both cards are flipped face down.
+* The game ends once all cards have been correctly matched.
 
-![](https://github.com/riddhik84/memory-game-web-app/tree/master/img/game.png)
+### Screenshots
+
+<img src="img/game.png" width="70%" />
 
