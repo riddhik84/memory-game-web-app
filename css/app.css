@@ -119,6 +119,10 @@ h1 {
      transform: rotateY(180deg);
 }
 
+.modal {
+     display: none;
+}
+
 .modal-content {
      position: fixed;
      top: 50%;

@@ -37,7 +37,7 @@ let open_cards = [];
 * @description Initialization of the game
 */
 function init() {
-    $('.modal').css('display', 'none');
+    //$('.modal').css('display', 'none');
 
     $moves.text('Moves: 0');
     $timer.text('Timer: 00:00');
@@ -107,7 +107,9 @@ function shuffleCards(cards_icons) {
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
-$cards.on('click', function(e) {
+$cards.on('click', clickcard);
+
+function clickcard(e) {
     let result = false;
     let currentID = e.target.id;
     console.log('currentID: ' + currentID);
@@ -116,6 +118,8 @@ $cards.on('click', function(e) {
         timer_start = true;
         runTimer();
     }
+
+    $('#'+currentID).unbind('click');
 
     showCard(currentID);
     updateCardDB(currentID);
@@ -130,7 +134,7 @@ $cards.on('click', function(e) {
         open_cards = [];
         open_card_icons = [];
     }
-});
+}
 
 /**
 * @description Start game timer
@@ -196,6 +200,8 @@ function check_card_match() {
     } else {
         result = false;
         console.log('Cards do not match');
+        $('#'+open_cards[0]).bind('click', clickcard);
+        $('#'+open_cards[1]).bind('click', clickcard);
         shakeCard(open_cards[0]);
         shakeCard(open_cards[1]);
         hideCard(open_cards[0]);
