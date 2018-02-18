@@ -12,6 +12,7 @@ let game = getInitialState();
 let timer_start = false;
 let total_moves = 0;
 let total_cards = 16;
+let total_stars = 3;
 let cards_icons = [
     'fa-diamond',
     'fa-diamond',
@@ -54,7 +55,7 @@ function getInitialState() {
         count: 0,
         moves: 0,
         timer: 0,
-        stars: 3,
+        total_stars: 3,
         displaySeconds: '',
         displayMinutes: '',
         displayTime: ''
@@ -168,16 +169,16 @@ function movesCounter() {
     $('#moves').text('Moves: ' + total_moves);
 
     if (total_moves == 14) {
-        stars = 2;
+        total_stars = 2;
         document.getElementById('3star').classList.remove('fa-star');
     } else if (total_moves == 20) {
-        stars = 1;
+        total_stars = 1;
         document.getElementById('2star').classList.remove('fa-star');
     } else if (total_moves == 30) {
-        stars = 0;
+        total_stars = 0;
         document.getElementById('1star').classList.remove('fa-star');
     }
-    console.log('Total stars: ', stars);
+    console.log('Total stars: ', total_stars);
 }
 
 /**
@@ -282,7 +283,7 @@ function gameOver() {
     showModal = setTimeout(function() {
         $('#timeScore').text('Total ' + $timer.text());
         $('#movesScore').text('Total Score: ' + total_moves);
-        $('#starsScore').text('Total Stars: ' + stars);
+        $('#starsScore').text('Total Stars: ' + total_stars);
         $('.modal').show();
     }, 500);
 }

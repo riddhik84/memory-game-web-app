@@ -15,4 +15,5 @@ Each turn:
 ### Screenshots
 
 <img src="img/game.png" width="70%" />
+<img src="img/play.png" width="70%" />
 
